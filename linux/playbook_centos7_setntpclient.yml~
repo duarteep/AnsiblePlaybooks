@@ -1,0 +1,14 @@
+- hosts: 177.70.122.97
+  tasks:
+          - name: "Install ntpdate"
+            yum:
+                    name: ntpdate
+                    state: latest
+                    
+          - name: "Schedule NTP adjust"
+            copy:
+                    src: cron.ntpdate
+                    dest: /etc/cron.d/cron.ntpdate
+                    owner: root
+                    group: root
+                    mode: 0644

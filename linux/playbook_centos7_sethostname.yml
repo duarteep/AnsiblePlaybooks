@@ -1,0 +1,5 @@
+- hosts: 177.70.122.97
+  tasks:
+          - name: "Change hostname"
+            hostname:
+                    name: LIN02.DUARTEEP.TECH

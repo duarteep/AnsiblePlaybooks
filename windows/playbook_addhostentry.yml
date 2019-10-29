@@ -1,0 +1,7 @@
+- hosts: 187.191.99.48
+  tasks:
+          - name: Add 127.0.0.1 as an A record for localhost
+            win_hosts:
+                    state: present
+                    canonical_name: localhost
+                    ip_address: 127.0.0.1
